@@ -257,24 +257,330 @@ else:
 
 6053
 [기초-논리연산] 참 거짓 바꾸기(설명)(py)
+a = bool(int(input()))
+print(not a)
 
 6054
 [기초-논리연산] 둘 다 참일 경우만 참 출력하기(설명)(py)
+a, b = input().split()
+a = int(a)
+b = int(b)
+print(bool(a) and bool(b))
 
 6055
 [기초-논리연산] 하나라도 참이면 참 출력하기(설명)(py)
+a, b = input().split()
+a = int(a)
+b = int(b)
+print(bool(a) or bool(b))
 
 6056
 [기초-논리연산] 참/거짓이 서로 다를 때에만 참 출력하기(설명)(py)
+a, b = input().split()
+a = int(a)
+b = int(b)
+if a ^ b == True:
+    print("True")
+else:
+    print("False")
 
 6057
 [기초-논리연산] 참/거짓이 서로 같을 때에만 참 출력하기(설명)(py)
+a, b = input().split()
+a = bool(int(a))
+b = bool(int(b))
+print(a==b)
+
 
 6058
 [기초-논리연산] 둘 다 거짓일 경우만 참 출력하기(py)
+a, b = input().split()
+a = bool(int(a))
+b = bool(int(b))
+print(not (a or b))
 
 6059
 [기초-비트단위논리연산] 비트단위로 NOT 하여 출력하기(설명)(py)
+a = int(input())
+print(~a)
 
 6060
 [기초-비트단위논리연산] 비트단위로 AND 하여 출력하기(설명)(py)
+a, b = map(int,input().split())
+
+print(a & b)
+
+6061
+[기초-비트단위논리연산] 비트단위로 OR 하여 출력하기(설명)(py)
+a, b = map(int,input().split())
+
+print(a | b)
+6062
+[기초-비트단위논리연산] 비트단위로 XOR 하여 출력하기(설명)(py)
+a, b = map(int,input().split())
+
+print(a ^ b)
+6063
+[기초-3항연산] 정수 2개 입력받아 큰 값 출력하기(설명)(py)
+a, b = input().split()
+a = int(a)
+b = int(b)
+c = (a if (a>=b) else b)
+print(int(c))
+
+6064
+[기초-3항연산] 정수 3개 입력받아 가장 작은 값 출력하기(설명)(py)
+a, b, c = input().split()
+a = int(a)
+b = int(b)
+c = int(c)
+d = ((a if (a<b) else b) if (a if (a<b) else b) < c else c )
+print(int(d))
+
+6065
+[기초-조건/선택실행구조] 정수 3개 입력받아 짝수만 출력하기(설명)(py)
+a, b, c = input().split()
+
+a = int(a)
+b = int(b)
+c = int(c)
+
+if a % 2 == 0: 
+  print(a)
+
+if b % 2 == 0:
+  print(b) 
+
+if c % 2 == 0:
+  print(c) 
+
+6066
+[기초-조건/선택실행구조] 정수 3개 입력받아 짝/홀 출력하기(설명)(py)
+a, b, c = input().split()
+
+a = int(a)
+b = int(b)
+c = int(c)
+
+if a % 2 == 0: 
+    print("even")
+else:
+    print("odd")
+
+if b % 2 == 0: 
+    print("even")
+else:
+    print("odd")
+    
+if c % 2 == 0: 
+    print("even")
+else:
+    print("odd")
+
+6067
+[기초-조건/선택실행구조] 정수 1개 입력받아 분류하기(설명)(py)
+a = int(input())
+
+if (a < 0) :
+    if (a % 2 == 0):
+        print("A")
+    else:
+        print("B")
+else:
+    if (a % 2 == 0):
+        print("C")
+    else:
+        print("D")
+6068
+[기초-조건/선택실행구조] 점수 입력받아 평가 출력하기(설명)(py)
+a = int(input())
+
+if (a >= 90):
+    print("A")
+elif (a >= 70):
+    print("B")
+elif (a >= 40):
+    print("C")
+else:
+    print("D")
+
+6069
+[기초-조건/선택실행구조] 평가 입력받아 다르게 출력하기(py)
+a = input()
+
+if (a == 'A'):
+    print("best!!!")
+elif (a == 'B'):
+    print("good!!")
+elif (a == 'C'):
+    print("run!")
+elif (a == 'D'):
+    print("slowly~")
+else:
+    print("what?")
+
+6070
+[기초-조건/선택실행구조] 월 입력받아 계절 출력하기(설명)(py)
+a = int(input())
+
+if (a//3==0):
+    print("winter")
+elif (a//3==1):
+    print("spring")
+elif (a//3==2):
+    print("summer")
+elif (a//3==3):
+    print("fall")
+else:
+    print("winter")
+
+6071
+[기초-반복실행구조] 0 입력될 때까지 무한 출력하기(설명)(py)
+while True:
+    a = int(input())
+    if a == 0:
+        break
+    else:
+        print(a)
+6072
+[기초-반복실행구조] 정수 1개 입력받아 카운트다운 출력하기1(설명)(py)
+a = int(input())
+
+while True: 
+    print(a) 
+    a = a - 1 
+    if (a == 0): 
+        break
+
+
+6073
+[기초-반복실행구조] 정수 1개 입력받아 카운트다운 출력하기2(py)
+a = int(input())
+
+while a != 0:
+    a = a-1
+    print(a)
+
+
+6074
+[기초-반복실행구조] 문자 1개 입력받아 알파벳 출력하기(설명)(py)
+a = input()
+i = ord('a')
+a = ord(a)
+
+while (i <= a):
+    print(chr(i), end=' ')
+    i += 1
+
+6075
+[기초-반복실행구조] 정수 1개 입력받아 그 수까지 출력하기1(py)
+a = int(input())
+i = 0
+while (i<=a):
+    print(i)
+    i = i + 1
+
+6076
+[기초-반복실행구조] 정수 1개 입력받아 그 수까지 출력하기2(설명)(py)
+n = int(input())
+for i in range(n+1):
+  print(i)
+
+6077
+[기초-종합] 짝수 합 구하기(설명)(py)
+n = int(input())
+result = 0
+
+for i in range(n+1):
+    if i % 2 == 0:
+        result = result + i
+    else: 
+        continue
+print(result)
+
+
+6078
+[기초-종합] 원하는 문자가 입력될 때까지 반복 출력하기(py)
+while True:
+    n = input()
+    print(n)
+    if n == 'q':
+        break
+        
+
+6079
+[기초-종합] 언제까지 더해야 할까?(py)
+n = int(input())
+s = 0 
+t = 0 
+
+while s<n : 
+    t = t+1 
+    s = s+t 
+
+print(t)
+
+
+
+6080
+[기초-종합] 주사위 2개 던지기(설명)(py)
+n, m = map(int,input().split())
+
+for i in range(1, n+1) :
+  for j in range(1, m+1) :
+    print(i, j)
+
+6081
+[기초-종합] 16진수 구구단 출력하기(py)
+
+6082
+[기초-종합] 3 6 9 게임의 왕이 되자(설명)(py)
+
+6083
+[기초-종합] 빛 섞어 색 만들기(설명)(py)
+
+6084
+[기초-종합] 소리 파일 저장용량 계산하기(py)
+
+6085
+[기초-종합] 그림 파일 저장용량 계산하기(py)
+
+6086
+[기초-종합] 거기까지! 이제 그만~(설명)(py)
+
+6087
+[기초-종합] 3의 배수는 통과(설명)(py)
+
+6088
+[기초-종합] 수 나열하기1(py)
+
+6089
+[기초-종합] 수 나열하기2(py)
+
+6090
+[기초-종합] 수 나열하기3(py)
+
+6091
+[기초-종합] 함께 문제 푸는 날(설명)(py)
+
+6092
+[기초-리스트] 이상한 출석 번호 부르기1(설명)(py)
+
+6093
+[기초-리스트] 이상한 출석 번호 부르기2(py)
+
+6094
+[기초-리스트] 이상한 출석 번호 부르기3(py)
+
+6095
+[기초-리스트] 바둑판에 흰 돌 놓기(설명)(py)
+
+6096
+[기초-리스트] 바둑알 십자 뒤집기(py)
+
+6097
+[기초-리스트] 설탕과자 뽑기(py)
+
+6098
+[기초-리스트] 성실한 개미(py)
+
