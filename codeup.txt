@@ -549,7 +549,9 @@ for i in range(1, 16):
 
 6085
 [기초-종합] 그림 파일 저장용량 계산하기(py)
-
+w, h, b = map(int, input().split())
+space = ((((w * h * b)/8)/1024)/1024)
+print("%0.2f MB" % space)
 6086
 [기초-종합] 거기까지! 이제 그만~(설명)(py)
 
